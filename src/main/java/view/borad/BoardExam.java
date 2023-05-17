@@ -3,8 +3,11 @@ package view.borad;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Scanner;
+import model.Board;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
-import model.board.*;
 
 public class BoardExam {
 
@@ -43,8 +46,19 @@ public class BoardExam {
 	}
 	
 	public static void main(String[] args) {
-		
-		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("crud");
+		try {
+			EntityManager em = emf.createEntityManager();
+			try {
+				//Board brd = em.
+			} catch (Exception e) {
+			}
+		} catch (Exception e) {
+		}
+
+			
+			
+
 	}
 
 }
