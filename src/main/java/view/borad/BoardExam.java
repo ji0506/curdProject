@@ -20,7 +20,6 @@ public class BoardExam {
 			conn = DriverManager.getConnection(url,"hr","12345");
 		} catch (Exception e) {
 			e.printStackTrace();
-//			sysoexit(1);
 		}
 		
 	}
@@ -44,8 +43,8 @@ public class BoardExam {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		
 	}
 
 }
