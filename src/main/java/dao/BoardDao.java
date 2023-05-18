@@ -1,10 +1,8 @@
 package dao;
 
 import java.util.List;
-
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
-
 import model.Board;
 
 public class BoardDao extends AbstractDao<Board> {
@@ -27,7 +25,7 @@ public class BoardDao extends AbstractDao<Board> {
 	}
 
 	// Id에 의한 데이터를 취득한다.
-	public Board selectById(String bno) {
+	public Board selectById(int bno) {
 		// AbstractDao 추상 클래스의 transaction 함수를 사용한다.
 		return super.transaction((em) -> {
 			// 쿼리를 만든다. (실무에서는 createQuery가 아닌 createNamedQuery를 사용해서 Entity에서 쿼리를 일괄 관리한다.)
@@ -48,7 +46,7 @@ public class BoardDao extends AbstractDao<Board> {
 		// AbstractDao 추상 클래스의 transaction 함수를 사용한다.
 		return super.transaction((em) -> {
 			// 쿼리를 만든다. (실무에서는 createQuery가 아닌 createNamedQuery를 사용해서 Entity에서 쿼리를 일괄 관리한다.)
-			Query query = em.createQuery("select b from Board b where b.btitle = :btitle");
+			Query query = em.createQuery("select b from Boards b where b.btitle = :btitle");
 			// 파라미터 설정
 			query.setParameter("btitle", btitle);
 			try {

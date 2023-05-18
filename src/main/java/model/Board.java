@@ -22,6 +22,7 @@ public class Board implements Serializable {
 	private String bcontent;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column
 	private Date bdate;
 
 	@Lob

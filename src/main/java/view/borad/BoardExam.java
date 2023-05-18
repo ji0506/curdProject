@@ -2,9 +2,6 @@ package view.borad;
 
 import java.util.List;
 import java.util.Scanner;
-
-import javax.persistence.EntityManager;
-
 import dao.BoardDao;
 import model.Board;
 
@@ -68,7 +65,7 @@ public class BoardExam {
 		brd.setBcontent(scan.nextLine());
 		System.out.print("작성자:");
 		brd.setBwriter(scan.nextLine());
-
+		brd.setBdate(LocalDateTime.now());
 		System.out.println("----------------------------------------");
 		System.out.println("보조 메뉴: 1.Ok | 2.Cancel");
 		System.out.print("메뉴 선택: ");
@@ -92,7 +89,7 @@ public class BoardExam {
 		String bno = scan.nextLine();
 
 		try {
-			Board brd = bdao.selectById(bno);
+			Board brd = bdao.selectById(Integer.parseInt(bno));
 
 			System.out.println("###########");
 			System.out.println("번호 : " + brd.getBno());
