@@ -6,16 +6,16 @@
 		      <!-- 캐쉬 기능. 이게 true가 되어 있으면 이 프로젝틀르 통하지 않는 query는 반영이 늦을 수 있음 -->
 		      <property name="eclipselink.query-results-cache" value="false" />
 		      <!-- 데이터 베이스 연결 상의 로그 레벨 설정 -->
-		      <property name="eclipselink.logging.level" value="INFO" />
+		      <property name="eclipselink.logging.level" value="OFF" />
 		      <property name="eclipselink.logging.parameters" value="true" />
 		      <!-- driver 패키지 설정 -->
 		      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 		      <!-- database 설정 -->
-		      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test" />
+		      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/crud" />
 		      <!-- 접속 id -->
-		      <property name="javax.persistence.jdbc.user" value="id" />
+		      <property name="javax.persistence.jdbc.user" value="root" />
 		      <!-- 접속 password -->
-		      <property name="javax.persistence.jdbc.password" value="password" />
+		      <property name="javax.persistence.jdbc.password" value="12345" />
 	    </properties>
 	</persistence-unit>
 </persistence>
