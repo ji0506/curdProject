@@ -22,7 +22,6 @@ public class Board implements Serializable {
 	private String bcontent;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column
 	private Date bdate;
 
 	@Lob
@@ -33,6 +32,8 @@ public class Board implements Serializable {
 	private String btitle;
 
 	private String bwriter;
+
+	private int views;
 
 	public Board() {
 	}
@@ -91,6 +92,14 @@ public class Board implements Serializable {
 
 	public void setBwriter(String bwriter) {
 		this.bwriter = bwriter;
+	}
+
+	public int getViews() {
+		return this.views;
+	}
+
+	public void setViews(int views) {
+		this.views = views;
 	}
 
 }
